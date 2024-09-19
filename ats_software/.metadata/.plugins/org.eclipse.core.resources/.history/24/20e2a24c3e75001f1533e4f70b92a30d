@@ -1,0 +1,14 @@
+#ifndef __STRUCTS_H
+#define __STRUCTS_H
+
+#include "cmsis_os.h"
+
+struct GpsData {
+	int32_t lat;
+	int32_t lon;
+	int32_t alt;
+	osMutexId_t* mtx;
+};
+
+
+#endif

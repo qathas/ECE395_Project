@@ -1,0 +1,9 @@
+#include "encoder.h"
+
+void encoder_init() {
+	return;
+}
+
+void calculate_update(struct EncoderPosition* encoder_position) {
+	return;
+}

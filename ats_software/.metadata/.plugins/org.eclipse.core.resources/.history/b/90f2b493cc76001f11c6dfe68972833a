@@ -1,0 +1,10 @@
+#ifndef __ENCODER_H
+#define __ENCODER_H
+
+#include "structs.h"
+
+void encoder_init();
+
+void calculate_update(struct GpsData* gps_data, struct TargetPosition* target_position);
+
+#endif
