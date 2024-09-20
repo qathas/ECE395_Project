@@ -1,4 +1,4 @@
-!SESSION 2024-09-11 14:51:53.417 -----------------------------------------------
+!SESSION 2024-09-20 15:46:07.927 -----------------------------------------------
 eclipse.buildId=Version 1.16.0
 java.version=17.0.11
 java.vendor=Eclipse Adoptium
@@ -6,16 +6,16 @@ BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
 Framework arguments:  -keyring /Users/aidancostello/.eclipse_keyring
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/aidancostello/.eclipse_keyring
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-11 14:53:18.483
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-20 15:46:28.983
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-11 14:53:18.486
-!MESSAGE Log4j2 initialized with config file /Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.log4j2.xml
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-20 15:46:28.986
+!MESSAGE Log4j2 initialized with config file /Users/aidancostello/Github/ECE395_Project/ats_software/ats_software/.metadata/.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-11 14:53:26.246
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-20 15:46:36.485
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY org.eclipse.urischeme 4 0 2024-09-11 14:53:30.334
+!ENTRY org.eclipse.urischeme 4 0 2024-09-20 15:46:40.912
 !MESSAGE org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
 !STACK 0
 java.lang.IllegalArgumentException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
@@ -33,9 +33,9 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTY
 	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:219)
 	... 6 more
 
-!ENTRY org.eclipse.cdt.core 1 0 2024-09-11 14:55:45.214
-!MESSAGE Indexed 'ats_software' (21 sources, 80 headers) in 8.39 sec: 4,719 declarations; 21,424 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0076%)
-!SESSION 2024-09-13 09:55:38.371 -----------------------------------------------
+!ENTRY org.eclipse.core.jobs 2 2 2024-09-20 15:46:48.111
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39
+!SESSION 2024-09-20 15:52:18.848 -----------------------------------------------
 eclipse.buildId=Version 1.16.0
 java.version=17.0.11
 java.vendor=Eclipse Adoptium
@@ -43,13 +43,13 @@ BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
 Framework arguments:  -keyring /Users/aidancostello/.eclipse_keyring
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/aidancostello/.eclipse_keyring
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-13 09:55:52.305
-!MESSAGE Log4j2 initialized with config file /Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.log4j2.xml
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-20 15:52:51.031
+!MESSAGE Log4j2 initialized with config file /Users/aidancostello/Github/ECE395_Project/ats_software/ats_software/.metadata/.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-13 09:56:05.963
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-20 15:52:59.606
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY org.eclipse.urischeme 4 0 2024-09-13 09:56:10.609
+!ENTRY org.eclipse.urischeme 4 0 2024-09-20 15:53:03.344
 !MESSAGE org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
 !STACK 0
 java.lang.IllegalArgumentException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
@@ -66,96 +66,6 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTY
 	at org.eclipse.core.internal.runtime.XmlProcessorFactory.parseWithErrorOnDOCTYPE(XmlProcessorFactory.java:246)
 	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:219)
 	... 6 more
-!SESSION 2024-09-17 15:58:06.330 -----------------------------------------------
-eclipse.buildId=Version 1.16.0
-java.version=17.0.11
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -keyring /Users/aidancostello/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/aidancostello/.eclipse_keyring
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-17 15:58:23.652
-!MESSAGE Log4j2 initialized with config file /Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.log4j2.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-17 15:58:36.165
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.urischeme 4 0 2024-09-17 15:58:39.725
-!MESSAGE org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-!STACK 0
-java.lang.IllegalArgumentException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:221)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.<init>(PlistFileWriter.java:69)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.getPlistFileWriter(RegistrationMacOsX.java:122)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.changePlistFile(RegistrationMacOsX.java:139)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
-	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:95)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.eclipse.core.internal.runtime.XmlProcessorFactory.parseWithErrorOnDOCTYPE(XmlProcessorFactory.java:246)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:219)
-	... 6 more
-!SESSION 2024-09-17 16:21:18.459 -----------------------------------------------
-eclipse.buildId=Version 1.16.0
-java.version=17.0.11
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -keyring /Users/aidancostello/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/aidancostello/.eclipse_keyring
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-17 16:21:33.046
-!MESSAGE Log4j2 initialized with config file /Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.log4j2.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-17 16:21:46.609
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.urischeme 4 0 2024-09-17 16:21:49.609
-!MESSAGE org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-!STACK 0
-java.lang.IllegalArgumentException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:221)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.<init>(PlistFileWriter.java:69)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.getPlistFileWriter(RegistrationMacOsX.java:122)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.changePlistFile(RegistrationMacOsX.java:139)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
-	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:95)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.eclipse.core.internal.runtime.XmlProcessorFactory.parseWithErrorOnDOCTYPE(XmlProcessorFactory.java:246)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:219)
-	... 6 more
-!SESSION 2024-09-19 15:23:26.646 -----------------------------------------------
-eclipse.buildId=Version 1.16.0
-java.version=17.0.11
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -keyring /Users/aidancostello/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/aidancostello/.eclipse_keyring
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-19 15:23:45.212
-!MESSAGE Log4j2 initialized with config file /Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.log4j2.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-19 15:24:01.212
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.urischeme 4 0 2024-09-19 15:24:02.738
-!MESSAGE org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-!STACK 0
-java.lang.IllegalArgumentException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:221)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.<init>(PlistFileWriter.java:69)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.getPlistFileWriter(RegistrationMacOsX.java:122)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.changePlistFile(RegistrationMacOsX.java:139)
-	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
-	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:95)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.eclipse.core.internal.runtime.XmlProcessorFactory.parseWithErrorOnDOCTYPE(XmlProcessorFactory.java:246)
-	at org.eclipse.urischeme.internal.registration.PlistFileWriter.getDom(PlistFileWriter.java:219)
-	... 6 more
+!ENTRY org.eclipse.core.jobs 2 2 2024-09-20 15:53:05.627
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39

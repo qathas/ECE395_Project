@@ -1,5 +1,0 @@
-#include "calculate.h"
-
-void self_gps_update(struct GpsData* gps_data) {
-	return;
-}

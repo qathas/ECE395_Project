@@ -2,7 +2,7 @@
 <Configuration status="info">
     <ThresholdFilter level="INFO"/>
     <Appenders>
-        <RollingFile name="DEBUGFILE" fileName="/Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.ide.log" filePattern="/Users/aidancostello/STM32CubeIDE/ats_software/.metadata/.ide.log-%d{yyyy-MM-dd}.log">
+        <RollingFile name="DEBUGFILE" fileName="/Users/aidancostello/Github/ECE395_Project/ats_software/ats_software/.metadata/.ide.log" filePattern="/Users/aidancostello/Github/ECE395_Project/ats_software/ats_software/.metadata/.ide.log-%d{yyyy-MM-dd}.log">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %c{1}:%L - %m%n" />
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />

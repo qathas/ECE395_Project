@@ -1,5 +1,0 @@
-#include "self_gps.h"
-
-void self_gps_init() {
-	return;
-}

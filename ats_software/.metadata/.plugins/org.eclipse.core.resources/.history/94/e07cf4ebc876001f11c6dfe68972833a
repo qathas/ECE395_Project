@@ -1,8 +1,0 @@
-#ifndef __SELF_GPS_H
-#define __SELF_GPS_H
-
-#include "structs.h"
-
-
-
-#endif
