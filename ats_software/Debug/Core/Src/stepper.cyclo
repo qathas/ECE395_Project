@@ -1,2 +1,2 @@
 ../Core/Src/stepper.c:3:6:stepper_init	1
-../Core/Src/stepper.c:7:6:stepper_update	1
+../Core/Src/stepper.c:8:6:stepper_update	1

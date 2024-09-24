@@ -1,9 +1,22 @@
 #include "stepper.h"
 
 void stepper_init() {
+	// TODO: init stepper motor
 	return;
 }
 
 void stepper_update(struct EncoderPosition* encoder_position, struct TargetPosition* target_position) {
+	// read encoder angle
+	osMutexAcquire(encoder_position->mtx, 0);
+	double encoder_rotation_angle = encoder_position->rotation_angle;
+	osMutexRelease(encoder_position->mtx);
+
+	// read target angle
+	osMutexAcquire(target_position->mtx, 0);
+	double rotation_angle = target_position->rotation_angle;
+	osMutexRelease(target_position->mtx);
+
+	// TODO: determine if we need to step or not, and which direction
+
 	return;
 }

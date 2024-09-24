@@ -1,2 +1,2 @@
 ../Core/Src/target_gps.c:3:6:target_gps_init	4	static
-../Core/Src/target_gps.c:7:6:target_gps_update	16	static
+../Core/Src/target_gps.c:8:6:target_gps_update	40	static

@@ -1,0 +1,10 @@
+#include "target_gps.h"
+
+void target_gps_init() {
+	// TODO: init uart for target gps
+	return;
+}
+
+void target_gps_update(struct GpsData* gps_data) {
+	return;
+}

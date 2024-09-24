@@ -1,2 +1,2 @@
 ../Core/Src/encoder.c:3:6:encoder_init	4	static
-../Core/Src/encoder.c:7:6:encoder_update	16	static
+../Core/Src/encoder.c:8:6:encoder_update	24	static

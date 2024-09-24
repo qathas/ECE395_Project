@@ -225,20 +225,18 @@ int main(void)
 
   /* creation of gpsDataMutex */
   gpsDataMutexHandle = osMutexNew(&gpsDataMutex_attributes);
-  struct GpsData gps_data = {0, 0, 0, 0, 0, 0, &gpsDataMutexHandle};
 
   /* creation of targetPositionMutex */
   targetPositionMutexHandle = osMutexNew(&targetPositionMutex_attributes);
-  struct TargetPosition target_position = {0, 0, &targetPositionMutexHandle};
 
   /* creation of encoderPositionMutex */
   encoderPositionMutexHandle = osMutexNew(&encoderPositionMutex_attributes);
-  struct EncoderPosition encoder_position = {0, &encoderPositionMutexHandle};
-
-  struct DataPointers data_pointers = {&gps_data, &target_position, &encoder_position};
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
+  struct GpsData gps_data = {0, 0, 0, 0, 0, 0, &gpsDataMutexHandle};
+  struct TargetPosition target_position = {0, 0, &targetPositionMutexHandle};
+  struct EncoderPosition encoder_position = {0, &encoderPositionMutexHandle};
+  struct DataPointers data_pointers = {&gps_data, &target_position, &encoder_position};
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
@@ -490,7 +488,7 @@ void task_entry_SelfGps(void *argument)
   for(;;)
   {
 	self_gps_update(((struct DataPointers*)argument)->gps_data);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END 5 */
 }
@@ -510,7 +508,7 @@ void task_entry_TargetGps(void *argument)
   for(;;)
   {
 	target_gps_update(((struct DataPointers*)argument)->gps_data);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END task_entry_TargetGps */
 }
@@ -529,7 +527,7 @@ void task_entry_Calculate(void *argument)
   for(;;)
   {
 	calculate_update(((struct DataPointers*)argument)->gps_data, ((struct DataPointers*)argument)->target_position);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END task_entry_Calculate */
 }
@@ -549,7 +547,7 @@ void task_entry_Encoder(void *argument)
   for(;;)
   {
 	encoder_update(((struct DataPointers*)argument)->encoder_position);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END task_entry_Encoder */
 }
@@ -569,7 +567,7 @@ void task_entry_Stepper(void *argument)
   for(;;)
   {
 	stepper_update(((struct DataPointers*)argument)->encoder_position, ((struct DataPointers*)argument)->target_position);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END task_entry_Stepper */
 }
@@ -589,7 +587,7 @@ void task_entry_Servo(void *argument)
   for(;;)
   {
 	servo_update(((struct DataPointers*)argument)->target_position);
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END task_entry_Servo */
 }

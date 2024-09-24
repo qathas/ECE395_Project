@@ -1,0 +1,13 @@
+#include "servo.h"
+
+void servo_init() {
+	//TODO: init servo
+	return;
+}
+
+void servo_update(struct TargetPosition* target_position) {
+	// read target angle
+	osMutexAcquire(target_position->mtx, 0);
+	double elevation_angle = target_position->elevation_angle;
+	return;
+}

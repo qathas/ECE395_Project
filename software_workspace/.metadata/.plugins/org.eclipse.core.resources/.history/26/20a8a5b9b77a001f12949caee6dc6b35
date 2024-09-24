@@ -1,0 +1,10 @@
+#include "servo.h"
+
+void servo_init() {
+	//TODO: init servo
+	return;
+}
+
+void servo_update(struct TargetPosition* target_position) {
+	return;
+}

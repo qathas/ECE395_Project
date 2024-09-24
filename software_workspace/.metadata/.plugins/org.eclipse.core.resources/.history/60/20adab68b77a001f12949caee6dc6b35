@@ -1,0 +1,22 @@
+#include "self_gps.h"
+
+void self_gps_init() {
+	// TODO: init self gps
+	return;
+}
+
+void self_gps_update(struct GpsData* gps_data) {
+	// TODO: read from gps over i2c
+	double self_lat = 0;
+	double self_lon = 0;
+	double self_alt = 0;
+
+	// update self gps data
+	osMutexAcquire(gps_data->mtx, 0);
+	gps_data->self_lat = self_lat;
+	gps_data->self_lon = self_lon;
+	gps_data->self.alt = self_alt;
+	osMutexRelease(gps_data->mtx);
+
+	return;
+}

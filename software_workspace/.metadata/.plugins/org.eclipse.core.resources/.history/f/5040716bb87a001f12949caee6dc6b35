@@ -1,0 +1,22 @@
+#include "target_gps.h"
+
+void target_gps_init() {
+	// TODO: init uart for target gps
+	return;
+}
+
+void target_gps_update(struct GpsData* gps_data) {
+	// TODO: read from target gps over uart
+	double self_lat = 0;
+	double self_lon = 0;
+	double self_alt = 0;
+
+	// update self gps data
+	osMutexAcquire(gps_data->mtx, 0);
+	gps_data->self_lat = self_lat;
+	gps_data->self_lon = self_lon;
+	gps_data->self_alt = self_alt;
+	osMutexRelease(gps_data->mtx);
+
+	return;
+}
