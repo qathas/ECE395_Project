@@ -1,0 +1,58 @@
+#include "MAX_M8C.h"
+
+uint8_t max_m8c_init(I2C_HandleTypeDef* i2c_handle, GPIO_TypeDef* reset_bank, uint16_t reset) {
+	return MAX_M8C_SUCCESS;
+}
+
+uint8_t max_m8c_request_nav_pvt(I2C_HandleTypeDef* i2c_handle) {
+	return MAX_M8C_SUCCESS;
+}
+
+uint16_t max_m8c_available(I2C_HandleTypeDef* i2c_handle) {
+	return MAX_M8C_SUCCESS;
+}
+
+uint8_t max_m8c_read_nav_pvt(I2C_HandleTypeDef* i2c_handle, struct max_m8c_gps_data* gps_data) {
+	return MAX_M8C_SUCCESS;
+}
+
+void max_m8c_calc_checksum(uint8_t* buf, uint8_t len, uint8_t* CK_A, uint8_t* CK_B) {
+	*CK_A = 0;
+	*CK_B = 0;
+	for (uint8_t i = 0; i < len; i++) {
+		*CK_A += buf[i];
+		*CK_B += *CK_A;
+	}
+}
+
+uint8_t max_m8c_i2c_transfer(I2C_HandleTypeDef* i2c_handle, struct ubx_packet_trimmed* packet) {
+	uint8_t buf[UBX_MAX_PACKET_SIZE];
+	uint16_t payload_size = (packet->length_upper << 8) + packet->length_lower;
+	uint16_t buf_size = UBX_HEADER_SIZE + UBX_CHECKSUM_SIZE + payload_size;
+
+	// fill header
+	buf[0] = SYNC_CHAR_1;
+	buf[1] = SYNC_CHAR_2;
+	buf[2] = packet->class;
+	buf[3] = packet->id;
+	buf[4] = packet->length_lower;
+	buf[5] = packet->length_upper;
+
+	// fill payload
+	for (uint16_t i = 0; i < payload_size; i++) {
+		buf[i+UBX_HEADER_SIZE] = packet->payload[i];
+	}
+
+	// fill checksum
+	uint8_t CK_A = 0;
+	uint8_t CK_B = 0;
+	max_m8c_calc_checksum(buf+UBX_NUM_SYNC_BYTES, payload_size+(UBX_HEADER_SIZE-UBX_NUM_SYNC_BYTES), &CK_A, &CK_B);
+	buf[buf_size-2] = CK_A;
+	buf[buf_size-1] = CK_B;
+
+	// transmit
+	HAL_I2C_Master_Transmit(i2c_handle, (I2C_ADDR<<1 & 0x01), buf, buf_size, 1000);
+
+
+	return MAX_M8C_SUCCESS;
+}

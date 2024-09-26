@@ -1253,6 +1253,114 @@ Discarded input sections
  .text          0x00000000       0x14 ./Core/Startup/startup_stm32l433cctx.o
  .data          0x00000000        0x0 ./Core/Startup/startup_stm32l433cctx.o
  .bss           0x00000000        0x0 ./Core/Startup/startup_stm32l433cctx.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .group         0x00000000        0xc ./Drivers/MAX_M8C/MAX_M8C.o
+ .text          0x00000000        0x0 ./Drivers/MAX_M8C/MAX_M8C.o
+ .data          0x00000000        0x0 ./Drivers/MAX_M8C/MAX_M8C.o
+ .bss           0x00000000        0x0 ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_init
+                0x00000000       0x1c ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_request_nav_pvt
+                0x00000000       0x16 ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_available
+                0x00000000       0x16 ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_read_nav_pvt
+                0x00000000       0x18 ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_calc_checksum
+                0x00000000       0x62 ./Drivers/MAX_M8C/MAX_M8C.o
+ .text.max_m8c_i2c_transfer
+                0x00000000       0xe2 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_info    0x00000000      0x916 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_abbrev  0x00000000      0x1eb ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_aranges
+                0x00000000       0x48 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_rnglists
+                0x00000000       0x32 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x1e8 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0xab4 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x22 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x8e ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x51 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x103 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x6a ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x1df ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x1ad ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x2e ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x28 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x1c ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x22 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0xfb ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000     0x1011 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x11f ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000    0x16153 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x6d ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000     0x38fb ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x189 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x5c ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000     0x13b4 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x5dd ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x1b9 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x130 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x26b ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x23d ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x241 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x375 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0xd6 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x22c ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x61 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0xa5 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x122 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x364 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0xa98 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x12d ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x5cf ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x44 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000      0x26d ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_macro   0x00000000       0x7c ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_line    0x00000000      0x838 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_str     0x00000000    0xcf3dc ./Drivers/MAX_M8C/MAX_M8C.o
+ .comment       0x00000000       0x44 ./Drivers/MAX_M8C/MAX_M8C.o
+ .debug_frame   0x00000000      0x100 ./Drivers/MAX_M8C/MAX_M8C.o
+ .ARM.attributes
+                0x00000000       0x34 ./Drivers/MAX_M8C/MAX_M8C.o
  .group         0x00000000        0xc ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
  .group         0x00000000        0xc ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
  .group         0x00000000        0xc ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
@@ -5323,6 +5431,7 @@ LOAD ./Core/Src/sysmem.o
 LOAD ./Core/Src/system_stm32l4xx.o
 LOAD ./Core/Src/target_gps.o
 LOAD ./Core/Startup/startup_stm32l433cctx.o
+LOAD ./Drivers/MAX_M8C/MAX_M8C.o
 LOAD ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
 LOAD ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
 LOAD ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o

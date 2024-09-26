@@ -1,0 +1,6 @@
+../Drivers/MAX_M8C/MAX_M8C.c:3:9:max_m8c_init	1
+../Drivers/MAX_M8C/MAX_M8C.c:7:9:max_m8c_request_nav_pvt	1
+../Drivers/MAX_M8C/MAX_M8C.c:11:10:max_m8c_available	1
+../Drivers/MAX_M8C/MAX_M8C.c:15:9:max_m8c_read_nav_pvt	1
+../Drivers/MAX_M8C/MAX_M8C.c:19:6:max_m8c_calc_checksum	2
+../Drivers/MAX_M8C/MAX_M8C.c:28:9:max_m8c_i2c_transfer	2

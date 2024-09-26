@@ -1,0 +1,13 @@
+#include "MAX_M8C.h"
+
+uint8_t max_m8c_init(I2C_HandleTypeDef* i2c_handle, GPIO_TypeDef* reset_bank, uint16_t reset) {
+	return MAX_M8C_SUCCESS;
+}
+
+uint8_t max_m8c_request_nav_pvt(I2C_HandleTypeDef* i2c_handle);
+
+uint16_t max_m8c_available(I2C_HandleTypeDef* i2c_handle);
+
+uint8_t max_m8c_read_nav_pvt(I2C_HandleTypeDef* i2c_handle, struct max_m8c_gps_data* gps_data);
+
+void max_m8c_calc_checksum(uint8_t buf, uint8_t len, uint8_t CK_A, uint8_t CK_B);

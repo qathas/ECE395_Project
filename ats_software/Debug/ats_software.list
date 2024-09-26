@@ -1137,8 +1137,8 @@ void task_entry_SelfGps(void *argument)
  80009a2:	681b      	ldr	r3, [r3, #0]
  80009a4:	4618      	mov	r0, r3
  80009a6:	f000 f878 	bl	8000a9a <self_gps_update>
-    osDelay(1);
- 80009aa:	2001      	movs	r0, #1
+    osDelay(10);
+ 80009aa:	200a      	movs	r0, #10
  80009ac:	f003 f92c 	bl	8003c08 <osDelay>
 	self_gps_update(((struct DataPointers*)argument)->gps_data);
  80009b0:	bf00      	nop
@@ -1166,8 +1166,8 @@ void task_entry_TargetGps(void *argument)
  80009c2:	681b      	ldr	r3, [r3, #0]
  80009c4:	4618      	mov	r0, r3
  80009c6:	f000 fa80 	bl	8000eca <target_gps_update>
-    osDelay(1);
- 80009ca:	2001      	movs	r0, #1
+    osDelay(10);
+ 80009ca:	200a      	movs	r0, #10
  80009cc:	f003 f91c 	bl	8003c08 <osDelay>
 	target_gps_update(((struct DataPointers*)argument)->gps_data);
  80009d0:	bf00      	nop
@@ -1196,8 +1196,8 @@ void task_entry_Calculate(void *argument)
  80009e4:	4619      	mov	r1, r3
  80009e6:	4610      	mov	r0, r2
  80009e8:	f7ff fd6a 	bl	80004c0 <calculate_update>
-    osDelay(1);
- 80009ec:	2001      	movs	r0, #1
+    osDelay(10);
+ 80009ec:	200a      	movs	r0, #10
  80009ee:	f003 f90b 	bl	8003c08 <osDelay>
 	calculate_update(((struct DataPointers*)argument)->gps_data, ((struct DataPointers*)argument)->target_position);
  80009f2:	bf00      	nop
@@ -1225,8 +1225,8 @@ void task_entry_Encoder(void *argument)
  8000a04:	689b      	ldr	r3, [r3, #8]
  8000a06:	4618      	mov	r0, r3
  8000a08:	f7ff fdb4 	bl	8000574 <encoder_update>
-    osDelay(1);
- 8000a0c:	2001      	movs	r0, #1
+    osDelay(10);
+ 8000a0c:	200a      	movs	r0, #10
  8000a0e:	f003 f8fb 	bl	8003c08 <osDelay>
 	encoder_update(((struct DataPointers*)argument)->encoder_position);
  8000a12:	bf00      	nop
@@ -1257,8 +1257,8 @@ void task_entry_Stepper(void *argument)
  8000a2a:	4619      	mov	r1, r3
  8000a2c:	4610      	mov	r0, r2
  8000a2e:	f000 f88e 	bl	8000b4e <stepper_update>
-    osDelay(1);
- 8000a32:	2001      	movs	r0, #1
+    osDelay(10);
+ 8000a32:	200a      	movs	r0, #10
  8000a34:	f003 f8e8 	bl	8003c08 <osDelay>
 	stepper_update(((struct DataPointers*)argument)->encoder_position, ((struct DataPointers*)argument)->target_position);
  8000a38:	bf00      	nop
@@ -1286,8 +1286,8 @@ void task_entry_Servo(void *argument)
  8000a4a:	685b      	ldr	r3, [r3, #4]
  8000a4c:	4618      	mov	r0, r3
  8000a4e:	f000 f85f 	bl	8000b10 <servo_update>
-    osDelay(1);
- 8000a52:	2001      	movs	r0, #1
+    osDelay(10);
+ 8000a52:	200a      	movs	r0, #10
  8000a54:	f003 f8d8 	bl	8003c08 <osDelay>
 	servo_update(((struct DataPointers*)argument)->target_position);
  8000a58:	bf00      	nop
