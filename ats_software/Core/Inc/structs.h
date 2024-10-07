@@ -4,12 +4,12 @@
 #include "cmsis_os.h"
 
 struct GpsData {
-	double self_lat;
-	double self_lon;
-	double self_alt;
-	double target_lat;
-	double target_lon;
-	double target_alt;
+	int32_t self_lat;
+	int32_t self_lon;
+	int32_t self_alt;
+	int32_t target_lat;
+	int32_t target_lon;
+	int32_t target_alt;
 	osMutexId_t* mtx;
 };
 

@@ -1,7 +1,0 @@
-#ifndef __MAX_M8C_H
-#define __MAX_M8C_H
-
-#define SYNC_CHAR_1 (uint8_t)0xB5
-
-
-#endif

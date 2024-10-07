@@ -1,0 +1,8 @@
+../Core/Src/MAX_M8C.c:3:9:max_m8c_init	24	static
+../Core/Src/MAX_M8C.c:12:9:max_m8c_request_nav_pvt	24	static
+../Core/Src/MAX_M8C.c:25:9:max_m8c_available	16	static
+../Core/Src/MAX_M8C.c:29:9:max_m8c_read_nav_pvt	128	static
+../Core/Src/MAX_M8C.c:52:6:max_m8c_calc_checksum	32	static
+../Core/Src/MAX_M8C.c:61:9:max_m8c_i2c_transmit	136	static
+../Core/Src/MAX_M8C.c:94:9:max_m8c_i2c_read_data	136	static
+../Core/Src/MAX_M8C.c:132:9:max_m8c_i2c_read_avail	32	static

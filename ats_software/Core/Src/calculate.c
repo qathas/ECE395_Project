@@ -3,17 +3,25 @@
 void calculate_update(struct GpsData* gps_data, struct TargetPosition* target_position) {
 	// copy out gps data
 	osMutexAcquire(gps_data->mtx, 0);
-	double self_lat = gps_data->self_lat;
-	double self_lon = gps_data->self_lon;
+	double self_lat = TO_RADIANS(gps_data->self_lat);
+	double self_lon = TO_RADIANS(gps_data->self_lon);
 	double self_alt = gps_data->self_alt;
-	double target_lat = gps_data->target_lat;
-	double target_lon = gps_data->target_lon;
+	double target_lat = TO_RADIANS(gps_data->target_lat);
+	double target_lon = TO_RADIANS(gps_data->target_lon);
 	double target_alt = gps_data->target_alt;
 	osMutexRelease(gps_data->mtx);
 
-	// TODO: perform calculation
-	double rotation_angle = 0;
-	double elevation_angle = 0;
+	double delta_lon = target_lon-self_lon;
+	double delta_lat = target_lat-self_lat;
+	double delta_alt = target_alt-self_alt;
+
+	// calculate rotation angle from north
+	double rotation_angle = TO_DEGREES(atan2(sin(delta_lon)*cos(target_lat), cos(self_lat)*sin(target_lat) - sin(self_lat)*cos(target_lat)*cos(delta_lon)));
+
+	// calculate elevation angle from horizontal
+	double a = sin(delta_lat/2)*sin(delta_lat/2) + sin(delta_lon/2)*sin(delta_lon/2)*cos(self_lat)*cos(target_lat); 
+  	double c = 2*atan2(sqrt(a), sqrt(1-a)); 
+	double elevation_angle = TO_DEGREES(atan2(delta_alt, EARTH_RADIUS_M*c));
 
 	// write target position data
 	osMutexAcquire(target_position->mtx, 0);

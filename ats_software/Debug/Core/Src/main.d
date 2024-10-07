@@ -41,8 +41,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/structs.h ../Core/Inc/self_gps.h ../Core/Inc/structs.h \
- ../Core/Inc/target_gps.h ../Core/Inc/calculate.h ../Core/Inc/encoder.h \
- ../Core/Inc/stepper.h ../Core/Inc/servo.h
+ ../Core/Inc/MAX_M8C.h ../Core/Inc/target_gps.h ../Core/Inc/calculate.h \
+ ../Core/Inc/encoder.h ../Core/Inc/stepper.h ../Core/Inc/servo.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -88,6 +88,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/structs.h:
 ../Core/Inc/self_gps.h:
 ../Core/Inc/structs.h:
+../Core/Inc/MAX_M8C.h:
 ../Core/Inc/target_gps.h:
 ../Core/Inc/calculate.h:
 ../Core/Inc/encoder.h:
