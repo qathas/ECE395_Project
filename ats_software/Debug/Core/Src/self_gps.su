@@ -1,2 +1,2 @@
-../Core/Src/self_gps.c:3:6:self_gps_init	4	static
-../Core/Src/self_gps.c:8:6:self_gps_update	40	static
+../Core/Src/self_gps.c:3:6:self_gps_init	16	static
+../Core/Src/self_gps.c:8:6:self_gps_update	32	static

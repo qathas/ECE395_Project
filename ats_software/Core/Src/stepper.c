@@ -1,22 +1,43 @@
 #include "stepper.h"
 
+static double current_angle;
+
 void stepper_init() {
-	// TODO: init stepper motor
+	HAL_GPIO_WritePin(STEPPER_RESET_BANK, STEPPER_RESET_PIN, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(STEPPER_EN_BANK, STEPPER_EN_PIN, GPIO_PIN_SET);
+	current_angle = 0;
 	return;
 }
 
 void stepper_update(struct EncoderPosition* encoder_position, struct TargetPosition* target_position) {
-	// read encoder angle
-	osMutexAcquire(encoder_position->mtx, 0);
-	double encoder_rotation_angle = encoder_position->rotation_angle;
-	osMutexRelease(encoder_position->mtx);
+	// TODO: implement read encoder angle
+//	osMutexAcquire(encoder_position->mtx, 0);
+//	double encoder_rotation_angle = encoder_position->rotation_angle;
+//	osMutexRelease(encoder_position->mtx);
 
 	// read target angle
 	osMutexAcquire(target_position->mtx, 0);
 	double rotation_angle = target_position->rotation_angle;
 	osMutexRelease(target_position->mtx);
 
-	// TODO: determine if we need to step or not, and which direction
+	// TODO implement microstepping
+
+	// if current angle is behind target, step
+	if (rotation_angle - current_angle >= (double)DEGREES_PER_STEP) {
+		HAL_GPIO_WritePin(STEPPER_DIR_BANK, STEPPER_DIR_PIN, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_SET);
+		HAL_Delay(10);
+		HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_RESET);
+		current_angle += (double)DEGREES_PER_STEP;
+	}
+	// if current angle is ahead of target, step negative
+	else if (current_angle - rotation_angle >= (double)DEGREES_PER_STEP) {
+		HAL_GPIO_WritePin(STEPPER_DIR_BANK, STEPPER_DIR_PIN, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_SET);
+		HAL_Delay(10);
+		HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_RESET);
+		current_angle -= (double)DEGREES_PER_STEP;
+	}
 
 	return;
 }

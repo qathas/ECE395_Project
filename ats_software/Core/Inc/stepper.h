@@ -2,6 +2,10 @@
 #define __STEPPER_H
 
 #include "structs.h"
+#include "stm32l4xx_hal.h"
+#include "pins.h"
+
+#define DEGREES_PER_STEP 1.8
 
 void stepper_init();
 

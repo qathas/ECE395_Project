@@ -43,6 +43,10 @@
 #define LAT_BYTE_OFFSET 28
 #define HEIGHT_BYTE_OFFSET 32
 
+// lat, long, alt scalars
+#define LAT_LON_SCALAR 10000000
+#define ALT_SCALAR 1000
+
 // trimmed packet structure (everything except sync chars and checksums)
 struct ubx_packet_trimmed {
 	uint8_t class;

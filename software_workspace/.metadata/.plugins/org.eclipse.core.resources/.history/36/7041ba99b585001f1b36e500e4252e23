@@ -1,0 +1,26 @@
+#include "self_gps.h"
+
+void self_gps_init(I2C_HandleTypeDef* i2c_handle) {
+	max_m8c_init(i2c_handle, GPS_RESET_BANK, GPS_RESET_PIN);
+	return;
+}
+
+void self_gps_update(I2C_HandleTypeDef* i2c_handle, struct GpsData* gps_data) {
+	// TODO: read from gps over i2c
+	// also need to convert to degrees and meters
+	struct max_m8c_gps_data raw_data = {0};
+
+
+	double self_lat = 0;
+	double self_lon = 0;
+	double self_alt = 0;
+
+	// update self gps data
+	osMutexAcquire(gps_data->mtx, 0);
+	gps_data->self_lat = self_lat;
+	gps_data->self_lon = self_lon;
+	gps_data->self_alt = self_alt;
+	osMutexRelease(gps_data->mtx);
+
+	return;
+}

@@ -1,0 +1,7 @@
+#ifndef __PINS_H
+#define __PINS_H
+
+#define GPS_RESET_BANK GPIOA
+#define GPS_RESET_PIN GPIO_PIN_0
+
+#endif
