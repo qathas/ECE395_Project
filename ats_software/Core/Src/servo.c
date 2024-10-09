@@ -1,7 +1,7 @@
 #include "servo.h"
 
 void servo_init(TIM_HandleTypeDef* timer_handle) {
-	timer_handle->Instance->CCR1 = 0;
+	write_angle(0);
 	return;
 }
 
@@ -11,7 +11,12 @@ void servo_update(TIM_HandleTypeDef* timer_handle, struct TargetPosition* target
 	double elevation_angle = target_position->elevation_angle;
 	osMutexRelease(target_position->mtx);
 
-	//TODO: set target angle
+	write_angle(elevation_angle);
 
 	return;
+}
+
+static void write_angle(TIM_HandleTypeDef* timer_handle, double angle) {
+	double duty_cycle = (DEGREE_TO_MS(angle))/PERIOD_MS;
+	timer_handle->Instance->CCR1 = (uint32_t)(duty_cycle*ARR);
 }

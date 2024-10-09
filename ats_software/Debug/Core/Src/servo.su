@@ -1,2 +1,2 @@
 ../Core/Src/servo.c:3:6:servo_init	16	static
-../Core/Src/servo.c:8:6:servo_update	24	static
+../Core/Src/servo.c:8:6:servo_update	40	static

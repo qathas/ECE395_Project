@@ -3,17 +3,24 @@
 static double current_angle;
 
 void stepper_init() {
+	// set reset and en high
 	HAL_GPIO_WritePin(STEPPER_RESET_BANK, STEPPER_RESET_PIN, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(STEPPER_EN_BANK, STEPPER_EN_PIN, GPIO_PIN_SET);
+	// set stck, dir, modes low
+	HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(STEPPER_DIR_BANK, STEPPER_DIR_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(STEPPER_MODE1_BANK, STEPPER_MODE1_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(STEPPER_MODE2_BANK, STEPPER_MODE2_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(STEPPER_MODE3_BANK, STEPPER_MODE3_PIN, GPIO_PIN_RESET);
 	current_angle = 0;
 	return;
 }
 
 void stepper_update(struct EncoderPosition* encoder_position, struct TargetPosition* target_position) {
 	// TODO: implement read encoder angle
-//	osMutexAcquire(encoder_position->mtx, 0);
-//	double encoder_rotation_angle = encoder_position->rotation_angle;
-//	osMutexRelease(encoder_position->mtx);
+	// osMutexAcquire(encoder_position->mtx, 0);
+	// double encoder_rotation_angle = encoder_position->rotation_angle;
+	// osMutexRelease(encoder_position->mtx);
 
 	// read target angle
 	osMutexAcquire(target_position->mtx, 0);
@@ -22,7 +29,7 @@ void stepper_update(struct EncoderPosition* encoder_position, struct TargetPosit
 
 	// TODO implement microstepping
 
-	// if current angle is behind target, step
+	// if current angle is behind target, step positive
 	if (rotation_angle - current_angle >= (double)DEGREES_PER_STEP) {
 		HAL_GPIO_WritePin(STEPPER_DIR_BANK, STEPPER_DIR_PIN, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(STEPPER_STCK_BANK, STEPPER_STCK_PIN, GPIO_PIN_SET);
