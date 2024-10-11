@@ -2,7 +2,7 @@
 
 void servo_init(TIM_HandleTypeDef* timer_handle) {
 	HAL_TIM_PWM_Start(timer_handle, TIM_CHANNEL_1);
-	write_angle(0);
+	write_angle(timer_handle, 0);
 	return;
 }
 
@@ -12,7 +12,7 @@ void servo_update(TIM_HandleTypeDef* timer_handle, struct TargetPosition* target
 	double elevation_angle = target_position->elevation_angle;
 	osMutexRelease(target_position->mtx);
 
-	write_angle(elevation_angle);
+	write_angle(timer_handle, elevation_angle);
 
 	return;
 }

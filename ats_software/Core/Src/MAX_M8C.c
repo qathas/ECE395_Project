@@ -60,7 +60,7 @@ void max_m8c_calc_checksum(uint8_t* buf, uint8_t len, uint8_t* CK_A, uint8_t* CK
 
 uint8_t max_m8c_i2c_transmit(I2C_HandleTypeDef* i2c_handle, struct ubx_packet_trimmed* packet) {
 	uint8_t buf[UBX_MAX_PACKET_SIZE];
-	uint16_t payload_size = (packet->length_upper << 8) + packet->length_lower;
+	uint16_t payload_size = (packet->length_upper << 8)|packet->length_lower;
 	uint16_t buf_size = UBX_HEADER_SIZE + UBX_CHECKSUM_SIZE + payload_size;
 
 	// fill header

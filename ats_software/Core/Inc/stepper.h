@@ -6,6 +6,7 @@
 #include "pins.h"
 
 #define DEGREES_PER_STEP 1.8
+#define MICROSTEP_UPPER_BOUND 5
 
 void stepper_init();
 

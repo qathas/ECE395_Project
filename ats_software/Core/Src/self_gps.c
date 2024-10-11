@@ -11,7 +11,9 @@ void self_gps_update(I2C_HandleTypeDef* i2c_handle, struct GpsData* gps_data) {
 	uint16_t bytes_avail = 0;
 
 	// request packet
-	max_m8c_request_nav_pvt(i2c_handle);
+	if (max_m8c_request_nav_pvt(i2c_handle) != MAX_M8C_SUCCESS) {
+		return;
+	}
 
 	// wait for response
 	while (bytes_avail != UBX_HEADER_SIZE+UBX_CHECKSUM_SIZE+UBX_NAV_PVT_PAYLOAD_SIZE) {
@@ -19,7 +21,9 @@ void self_gps_update(I2C_HandleTypeDef* i2c_handle, struct GpsData* gps_data) {
 	}
 
 	// read response
-	max_m8c_read_nav_pvt(i2c_handle, &raw_data);
+	if (max_m8c_read_nav_pvt(i2c_handle, &raw_data) != MAX_M8C_SUCCESS) {
+		return;
+	}
 
 	// update self gps data
 	osMutexAcquire(gps_data->mtx, 0);
