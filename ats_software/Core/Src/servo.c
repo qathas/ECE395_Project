@@ -1,6 +1,7 @@
 #include "servo.h"
 
 void servo_init(TIM_HandleTypeDef* timer_handle) {
+	HAL_TIM_PWM_Start(timer_handle, TIM_CHANNEL_1);
 	write_angle(0);
 	return;
 }
